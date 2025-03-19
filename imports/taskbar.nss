@@ -31,17 +31,17 @@ menu(where=@(this.count == 0) type="taskbar" image=icon.settings expanded=true)
 	}
 	menu(title='Ventanas' image=\uE1FB) //title=title.windows
 	{
-		item(title=title.cascade_windows cmd=command.cascade_windows)
-		item(title=title.Show_windows_stacked cmd=command.Show_windows_stacked)
+		item(title='Cascada' cmd=command.cascade_windows)
+		//item(title=title.Show_windows_stacked cmd=command.Show_windows_stacked)
 		//item(title=title.Show_windows_side_by_side cmd=command.Show_windows_side_by_side)
 		sep
-		item(title=title.minimize_all_windows cmd=command.minimize_all_windows)
-		item(title=title.restore_all_windows cmd=command.restore_all_windows)
+		item(title='Minimizar' cmd=command.minimize_all_windows)
+		item(title='Restaurar' cmd=command.restore_all_windows)
 	}
 	item(title=title.desktop vis=@key.shift() image=icon.desktop cmd=command.toggle_desktop)
 	item(title='Reiniciar el explorador' vis=@key.shift() image=\uE025 cmd=command.restart_explorer) //title=title.exit_explorer
 	import 'gotoConfig.nss'
 	item(title=title.settings vis=not(@key.shift())  image=icon.settings(auto, image.color1) cmd='ms-settings:')
-	item(title=title.task_manager sep=both image=icon.task_manager cmd='taskmgr.exe')
-	item(title=title.taskbar_Settings sep=both image=inherit cmd='ms-settings:taskbar')
+	item(title='Administrador de tareas' sep=both image=icon.task_manager cmd='taskmgr.exe')
+	item(title='Ajustes Barra de tareas' sep=both image=inherit cmd='ms-settings:taskbar')
 }

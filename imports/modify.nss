@@ -4,7 +4,7 @@ modify(mode=mode.multiple
 	where=this.id(id.restore_previous_versions,id.cast_to_device)
 	vis=vis.remove)
 
-modify(type="recyclebin" where=window.is_desktop and this.id==id.empty_recycle_bin pos=1 sep)
+modify(type="recyclebin" where=this.id==id.empty_recycle_bin pos=0 sep)
 
 modify(find="unpin*" pos="bottom" menu="Pin/Unpin")
 modify(find="pin*" pos="top" menu="Pin/Unpin")
@@ -63,7 +63,7 @@ modify(find='Desanclar desde Inicio' image=\uE0C7 menu="Anclar/Desanclar")
 
 //More Options
 modify(find='Abrir con Visual Studio' menu=title.more_options)
-modify(find='NanaZip' menu=title.more_options)
+modify(find='WinRAR' menu=title.more_options)
 modify(find='Firmar con AutoFirma' menu=title.more_options)
 modify(find='Generar huella digital con AutoFirma' menu=title.more_options)
 modify(find='Examinar con Microsoft Defender' menu=title.more_options)
